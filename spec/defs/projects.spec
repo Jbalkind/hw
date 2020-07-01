@@ -293,16 +293,14 @@
     #error "one of NVDLA_PRIMARY_MEMIF_MAX_BURST_LENGTH_{1,4} must be set"
 #endif
 
-#if defined(PRIMARY_MEMIF_WIDTH_512)
-    %define NVDLA_PRIMARY_MEMIF_WIDTH 512
-#elif defined(PRIMARY_MEMIF_WIDTH_256)
+#if defined(PRIMARY_MEMIF_WIDTH_256)
     %define NVDLA_PRIMARY_MEMIF_WIDTH 256
 #elif defined(PRIMARY_MEMIF_WIDTH_128)
     %define NVDLA_PRIMARY_MEMIF_WIDTH 128
 #elif defined(PRIMARY_MEMIF_WIDTH_64)
     %define NVDLA_PRIMARY_MEMIF_WIDTH 64
 #else
-    #error "one of NVDLA_PRIMARY_MEMIF_WIDTH_{512,256,128,64} must be set"
+    #error "one of NVDLA_PRIMARY_MEMIF_WIDTH_{256,128,64} must be set"
 #endif
 
 #if defined(SECONDARY_MEMIF_MAX_BURST_LENGTH_1)
